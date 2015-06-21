@@ -4,26 +4,38 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>使用nodemailer 发送邮件 | 像素森林</title>
+    <title>Word删除字间空格 | 像素森林</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="osss">
     
 
     
-    <meta name="description" content="npm安装nodemailer1npm i nodemailer
-1234567891011121314151617181920212223242526272829var nodemailer = require(&apos;nodemailer&apos;);var config = &amp;#123;    host: &apos;smtp.exmail.qq.com&apos;,    port: 465,    secure: tru">
+    <meta name="description" content="使用扫描软件将图片转成文字后会发现内容里面夹杂很多空格手工删除的话太累了，下面介绍个方法使用word的替换功能来自动删除
+
+打开word替换对话框，启用使用通配符选项
+查找内容填写：([!a-zA-Z0-9\[]) ([!a-zA-Z0-9\[])
+替换内容填写：\1\2
+最后点击全部替换，大功告成">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用nodemailer 发送邮件">
-<meta property="og:url" content="http://osssx.github.io/2015/04/28/使用nodemailer发送邮件/index.html">
+<meta property="og:title" content="Word删除字间空格">
+<meta property="og:url" content="http://osssx.github.io/2014/12/10/Word删除字间空格/index.html">
 <meta property="og:site_name" content="像素森林">
-<meta property="og:description" content="npm安装nodemailer1npm i nodemailer
-1234567891011121314151617181920212223242526272829var nodemailer = require(&apos;nodemailer&apos;);var config = &amp;#123;    host: &apos;smtp.exmail.qq.com&apos;,    port: 465,    secure: tru">
-<meta property="og:updated_time" content="2015-06-21T11:07:57.634Z">
+<meta property="og:description" content="使用扫描软件将图片转成文字后会发现内容里面夹杂很多空格手工删除的话太累了，下面介绍个方法使用word的替换功能来自动删除
+
+打开word替换对话框，启用使用通配符选项
+查找内容填写：([!a-zA-Z0-9\[]) ([!a-zA-Z0-9\[])
+替换内容填写：\1\2
+最后点击全部替换，大功告成">
+<meta property="og:updated_time" content="2015-06-21T14:46:30.892Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用nodemailer 发送邮件">
-<meta name="twitter:description" content="npm安装nodemailer1npm i nodemailer
-1234567891011121314151617181920212223242526272829var nodemailer = require(&apos;nodemailer&apos;);var config = &amp;#123;    host: &apos;smtp.exmail.qq.com&apos;,    port: 465,    secure: tru">
+<meta name="twitter:title" content="Word删除字间空格">
+<meta name="twitter:description" content="使用扫描软件将图片转成文字后会发现内容里面夹杂很多空格手工删除的话太累了，下面介绍个方法使用word的替换功能来自动删除
+
+打开word替换对话框，启用使用通配符选项
+查找内容填写：([!a-zA-Z0-9\[]) ([!a-zA-Z0-9\[])
+替换内容填写：\1\2
+最后点击全部替换，大功告成">
 
     
     <link rel="alternative" href="/atom.xml" title="像素森林" type="application/atom+xml">
@@ -83,14 +95,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/04/28/使用nodemailer发送邮件/" title="使用nodemailer 发送邮件" itemprop="url">使用nodemailer 发送邮件</a>
+      <a href="/2014/12/10/Word删除字间空格/" title="Word删除字间空格" itemprop="url">Word删除字间空格</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="osss" target="_blank" itemprop="author">osss</a>
 		
   <p class="article-time">
-    <time datetime="2015-04-28T02:03:19.000Z" itemprop="datePublished"> 发表于 2015-04-28</time>
+    <time datetime="2014-12-10T01:38:27.000Z" itemprop="datePublished"> 发表于 2014-12-10</time>
     
   </p>
 </header>
@@ -103,22 +115,22 @@
 		
 		</div>
 		
-		<p>npm安装nodemailer<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="tag">i</span> nodemailer</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nodemailer = <span class="built_in">require</span>(<span class="string">'nodemailer'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> config = &#123;</span><br><span class="line">    host: <span class="string">'smtp.exmail.qq.com'</span>,</span><br><span class="line">    port: <span class="number">465</span>,</span><br><span class="line">    secure: <span class="literal">true</span>,</span><br><span class="line">    auth: &#123;</span><br><span class="line">        user: <span class="string">'your_email'</span>,</span><br><span class="line">        pass: <span class="string">'your_password'</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> transporter = nodemailer.createTransport(config);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> data = &#123;</span><br><span class="line">    from: <span class="string">'xx@xx.com'</span>, <span class="comment">// sender address</span></span><br><span class="line">    to: <span class="string">'xx@xx.com'</span>, <span class="comment">// list of receivers</span></span><br><span class="line">    subject: <span class="string">'Hello'</span>, <span class="comment">// Subject line</span></span><br><span class="line">    text: <span class="string">'Hello world'</span>, <span class="comment">// plaintext body</span></span><br><span class="line">    html: <span class="string">'&lt;b&gt;Hello world &lt;/b&gt;'</span> <span class="comment">// html body</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">transporter.sendMail(data, <span class="function"><span class="keyword">function</span>(<span class="params">error, info</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (error) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(error);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'Message sent: '</span> + info.response);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+		<p>使用扫描软件将图片转成文字后会发现内容里面夹杂很多空格手工删除的话太累了，下面介绍个方法使用word的替换功能来自动删除</p>
+<ul>
+<li>打开word替换对话框，启用使用通配符选项</li>
+<li>查找内容填写：<code>([!a-zA-Z0-9\[]) ([!a-zA-Z0-9\[])</code></li>
+<li>替换内容填写：<code>\1\2</code></li>
+<li>最后点击全部替换，大功告成</li>
+</ul>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
-<div class="article-categories">
-  <span></span>
-  <a class="article-category-link" href="/categories/编程/">编程</a>
-</div>
-
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/nodejs/">nodejs</a>
+  <span></span> <a href="/tags/office/">office</a>
   </div>
 
 </div>
@@ -127,7 +139,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://osssx.github.io/2015/04/28/使用nodemailer发送邮件/" data-title="使用nodemailer 发送邮件 | 像素森林" data-tsina="null" class="share clearfix">
+	  <div data-url="http://osssx.github.io/2014/12/10/Word删除字间空格/" data-title="Word删除字间空格 | 像素森林" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -141,18 +153,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2015/06/21/request获取GBK编码网页/" title="request 获取GBK编码网页">
+ <a href="/2015/01/20/我的Openwrt路由器配置/" title="我的Openwrt路由器配置">
   <strong>上一篇：</strong><br/>
   <span>
-  request 获取GBK编码网页</span>
+  我的Openwrt路由器配置</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2015/01/20/我的Openwrt路由器配置/"  title="我的Openwrt路由器配置">
+<a href="/2014/05/22/UPLAY游戏备份恢复/"  title="UPLAY游戏备份恢复">
  <strong>下一篇：</strong><br/> 
- <span>我的Openwrt路由器配置
+ <span>UPLAY游戏备份恢复
 </span>
 </a>
 </div>
@@ -161,7 +173,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/04/28/使用nodemailer发送邮件/" data-title="使用nodemailer 发送邮件" data-url="http://osssx.github.io/2015/04/28/使用nodemailer发送邮件/"></div>
+	<div class="ds-thread" data-thread-key="2014/12/10/Word删除字间空格/" data-title="Word删除字间空格" data-url="http://osssx.github.io/2014/12/10/Word删除字间空格/"></div>
 </section>
 
 
