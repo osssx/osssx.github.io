@@ -4,32 +4,29 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>UPLAY游戏备份恢复 | 像素森林</title>
+    <title>gbk格式csv转成utf8 | 像素森林</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="osss">
     
 
     
-    <meta name="description" content="备份游戏文件夹，uplay里先下载游戏一小会再暂停
-退出uplay，复制备份游戏文件到安装文件夹里的uplay download编号文件夹里覆盖，再剪切到安装文件夹保证uplay download文件夹为空
-删除uplay安装文件夹里data目录的对应编号文件夹
-打开uplay验证游戏文件">
+    <meta name="description" content="处理csv碰到的问题office保存的csv文件是gbk格式，直接给nodejs处理会造成中文不能识别
+解决方法通过iconv-lite转码成utf8格式npm安装iconv-lite1npm install iconv-lite
+新建convert.js文件12345678910111213141516var iconv = require(&apos;iconv-lite&apos;);var fs = requ">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UPLAY游戏备份恢复">
-<meta property="og:url" content="http://osssx.github.io/2014/05/22/UPLAY游戏备份恢复/index.html">
+<meta property="og:title" content="gbk格式csv转成utf8">
+<meta property="og:url" content="http://osssx.github.io/2015/05/12/gbk格式csv转成utf8/index.html">
 <meta property="og:site_name" content="像素森林">
-<meta property="og:description" content="备份游戏文件夹，uplay里先下载游戏一小会再暂停
-退出uplay，复制备份游戏文件到安装文件夹里的uplay download编号文件夹里覆盖，再剪切到安装文件夹保证uplay download文件夹为空
-删除uplay安装文件夹里data目录的对应编号文件夹
-打开uplay验证游戏文件">
-<meta property="og:updated_time" content="2015-06-21T11:05:02.566Z">
+<meta property="og:description" content="处理csv碰到的问题office保存的csv文件是gbk格式，直接给nodejs处理会造成中文不能识别
+解决方法通过iconv-lite转码成utf8格式npm安装iconv-lite1npm install iconv-lite
+新建convert.js文件12345678910111213141516var iconv = require(&apos;iconv-lite&apos;);var fs = requ">
+<meta property="og:updated_time" content="2015-06-21T22:57:27.333Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="UPLAY游戏备份恢复">
-<meta name="twitter:description" content="备份游戏文件夹，uplay里先下载游戏一小会再暂停
-退出uplay，复制备份游戏文件到安装文件夹里的uplay download编号文件夹里覆盖，再剪切到安装文件夹保证uplay download文件夹为空
-删除uplay安装文件夹里data目录的对应编号文件夹
-打开uplay验证游戏文件">
+<meta name="twitter:title" content="gbk格式csv转成utf8">
+<meta name="twitter:description" content="处理csv碰到的问题office保存的csv文件是gbk格式，直接给nodejs处理会造成中文不能识别
+解决方法通过iconv-lite转码成utf8格式npm安装iconv-lite1npm install iconv-lite
+新建convert.js文件12345678910111213141516var iconv = require(&apos;iconv-lite&apos;);var fs = requ">
 
     
     <link rel="alternative" href="/atom.xml" title="像素森林" type="application/atom+xml">
@@ -89,14 +86,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2014/05/22/UPLAY游戏备份恢复/" title="UPLAY游戏备份恢复" itemprop="url">UPLAY游戏备份恢复</a>
+      <a href="/2015/05/12/gbk格式csv转成utf8/" title="gbk格式csv转成utf8" itemprop="url">gbk格式csv转成utf8</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="osss" target="_blank" itemprop="author">osss</a>
 		
   <p class="article-time">
-    <time datetime="2014-05-22T10:18:40.000Z" itemprop="datePublished"> 发表于 2014-05-22</time>
+    <time datetime="2015-05-12T06:48:59.000Z" itemprop="datePublished"> 发表于 2015-05-12</time>
     
   </p>
 </header>
@@ -105,16 +102,13 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			
+			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#处理csv碰到的问题"><span class="toc-number">1.</span> <span class="toc-text">处理csv碰到的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方法"><span class="toc-number">2.</span> <span class="toc-text">解决方法</span></a></li></ol>
 		
 		</div>
 		
-		<ol>
-<li>备份游戏文件夹，uplay里先下载游戏一小会再暂停</li>
-<li>退出uplay，复制备份游戏文件到安装文件夹里的uplay download编号文件夹里覆盖，再剪切到安装文件夹保证uplay download文件夹为空</li>
-<li>删除uplay安装文件夹里data目录的对应编号文件夹</li>
-<li>打开uplay验证游戏文件</li>
-</ol>
+		<h3 id="处理csv碰到的问题">处理csv碰到的问题</h3><p>office保存的csv文件是gbk格式，直接给nodejs处理会造成中文不能识别</p>
+<h3 id="解决方法">解决方法</h3><p>通过<code>iconv-lite</code>转码成utf8格式<br><code>npm</code>安装<code>iconv-lite</code><br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> iconv-lite</span><br></pre></td></tr></table></figure></p>
+<p>新建<code>convert.js</code>文件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iconv = <span class="built_in">require</span>(<span class="string">'iconv-lite'</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> input = process.argv[<span class="number">2</span>];</span><br><span class="line"><span class="keyword">if</span> (fs.existsSync(input)) &#123;</span><br><span class="line">    <span class="keyword">var</span> fileStr = fs.readFileSync(input, &#123;</span><br><span class="line">        encoding: <span class="string">'binary'</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">var</span> buf = <span class="keyword">new</span> Buffer(fileStr, <span class="string">'binary'</span>);</span><br><span class="line">    <span class="keyword">var</span> str = iconv.decode(buf, <span class="string">'GBK'</span>);</span><br><span class="line">    fs.writeFile(<span class="string">'output.csv'</span>, str, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'csv file converted!'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'file path invalid'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -122,13 +116,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/游戏/">游戏</a>
+  <a class="article-category-link" href="/categories/编程/">编程</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/uplay/">uplay</a><a href="/tags/游戏/">游戏</a>
+  <span></span> <a href="/tags/nodejs/">nodejs</a>
   </div>
 
 </div>
@@ -137,7 +131,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://osssx.github.io/2014/05/22/UPLAY游戏备份恢复/" data-title="UPLAY游戏备份恢复 | 像素森林" data-tsina="null" class="share clearfix">
+	  <div data-url="http://osssx.github.io/2015/05/12/gbk格式csv转成utf8/" data-title="gbk格式csv转成utf8 | 像素森林" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -151,19 +145,27 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2014/12/10/Word删除字间空格/" title="Word删除字间空格">
+ <a href="/2015/06/21/request获取GBK编码网页/" title="request 获取GBK编码网页">
   <strong>上一篇：</strong><br/>
   <span>
-  Word删除字间空格</span>
+  request 获取GBK编码网页</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2015/04/28/使用nodemailer发送邮件/"  title="使用nodemailer 发送邮件">
+ <strong>下一篇：</strong><br/> 
+ <span>使用nodemailer 发送邮件
+</span>
+</a>
+</div>
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2014/05/22/UPLAY游戏备份恢复/" data-title="UPLAY游戏备份恢复" data-url="http://osssx.github.io/2014/05/22/UPLAY游戏备份恢复/"></div>
+	<div class="ds-thread" data-thread-key="2015/05/12/gbk格式csv转成utf8/" data-title="gbk格式csv转成utf8" data-url="http://osssx.github.io/2015/05/12/gbk格式csv转成utf8/"></div>
 </section>
 
 
@@ -173,7 +175,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- 
+ <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#处理csv碰到的问题"><span class="toc-number">1.</span> <span class="toc-text">处理csv碰到的问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解决方法"><span class="toc-number">2.</span> <span class="toc-text">解决方法</span></a></li></ol>
  
   </div>
 

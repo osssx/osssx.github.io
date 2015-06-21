@@ -145,6 +145,71 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/05/12/gbk格式csv转成utf8/" title="gbk格式csv转成utf8" itemprop="url">gbk格式csv转成utf8</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="osss" target="_blank" itemprop="author">osss</a>
+		
+  <p class="article-time">
+    <time datetime="2015-05-12T06:48:59.000Z" itemprop="datePublished"> 发表于 2015-05-12</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h3 id="处理csv碰到的问题">处理csv碰到的问题</h3><p>office保存的csv文件是gbk格式，直接给nodejs处理会造成中文不能识别</p>
+<h3 id="解决方法">解决方法</h3><p>通过<code>iconv-lite</code>转码成utf8格式<br><code>npm</code>安装<code>iconv-lite</code><br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> iconv-lite</span><br></pre></td></tr></table></figure></p>
+<p>新建<code>convert.js</code>文件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iconv = <span class="built_in">require</span>(<span class="string">'iconv-lite'</span>);</span><br><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">'fs'</span>);</span><br><span class="line"><span class="keyword">var</span> input = process.argv[<span class="number">2</span>];</span><br><span class="line"><span class="keyword">if</span> (fs.existsSync(input)) &#123;</span><br><span class="line">    <span class="keyword">var</span> fileStr = fs.readFileSync(input, &#123;</span><br><span class="line">        encoding: <span class="string">'binary'</span></span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">var</span> buf = <span class="keyword">new</span> Buffer(fileStr, <span class="string">'binary'</span>);</span><br><span class="line">    <span class="keyword">var</span> str = iconv.decode(buf, <span class="string">'GBK'</span>);</span><br><span class="line">    fs.writeFile(<span class="string">'output.csv'</span>, str, <span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (err) <span class="keyword">throw</span> err;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'csv file converted!'</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'file path invalid'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/编程/">编程</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/nodejs/">nodejs</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/05/12/gbk格式csv转成utf8/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/05/12/gbk格式csv转成utf8/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/04/28/使用nodemailer发送邮件/" title="使用nodemailer 发送邮件" itemprop="url">使用nodemailer 发送邮件</a>
   </h1>
   <p class="article-author">By
@@ -450,7 +515,7 @@
 		  
 		
 		  
-			<li><a href="/categories/编程/" title="编程">编程<sup>2</sup></a></li>
+			<li><a href="/categories/编程/" title="编程">编程<sup>3</sup></a></li>
 		  
 		
 		</ul>
@@ -463,7 +528,7 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>2</sup></a></li>
+				<li><a href="/tags/nodejs/" title="nodejs">nodejs<sup>3</sup></a></li>
 			
 		
 			
