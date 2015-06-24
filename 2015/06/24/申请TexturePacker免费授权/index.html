@@ -4,29 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>我的Openwrt路由器配置 | 像素森林</title>
+    <title>申请TexturePacker免费授权（TP:712FBB1A） | 像素森林</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="osss">
     
 
     
-    <meta name="description" content="最近折腾了下WNDR 3700v4路由器openwrt固件更新，记录下过程备忘：
-拨号配置在WAN口高级设置下调大LCP响应故障阈值和LCP响应间隔的值防止迅雷下载断线
-计划任务配置新建restart.sh文件内容如下：12345678910111213141516171819#!/bin/shflag=$(date +%s -r /root/flag)ctime=$(date +%s)x=$((">
+    <meta name="description" content="TP:712FBB1A
+TexturePacker主页：http://www.codeandweb.com/">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的Openwrt路由器配置">
-<meta property="og:url" content="http://blog.osss.me/2015/01/20/我的Openwrt路由器配置/index.html">
+<meta property="og:title" content="申请TexturePacker免费授权（TP:712FBB1A）">
+<meta property="og:url" content="http://blog.osss.me/2015/06/24/申请TexturePacker免费授权/index.html">
 <meta property="og:site_name" content="像素森林">
-<meta property="og:description" content="最近折腾了下WNDR 3700v4路由器openwrt固件更新，记录下过程备忘：
-拨号配置在WAN口高级设置下调大LCP响应故障阈值和LCP响应间隔的值防止迅雷下载断线
-计划任务配置新建restart.sh文件内容如下：12345678910111213141516171819#!/bin/shflag=$(date +%s -r /root/flag)ctime=$(date +%s)x=$((">
-<meta property="og:updated_time" content="2015-06-21T11:30:51.108Z">
+<meta property="og:description" content="TP:712FBB1A
+TexturePacker主页：http://www.codeandweb.com/">
+<meta property="og:updated_time" content="2015-06-24T08:00:37.346Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的Openwrt路由器配置">
-<meta name="twitter:description" content="最近折腾了下WNDR 3700v4路由器openwrt固件更新，记录下过程备忘：
-拨号配置在WAN口高级设置下调大LCP响应故障阈值和LCP响应间隔的值防止迅雷下载断线
-计划任务配置新建restart.sh文件内容如下：12345678910111213141516171819#!/bin/shflag=$(date +%s -r /root/flag)ctime=$(date +%s)x=$((">
+<meta name="twitter:title" content="申请TexturePacker免费授权（TP:712FBB1A）">
+<meta name="twitter:description" content="TP:712FBB1A
+TexturePacker主页：http://www.codeandweb.com/">
 
     
     <link rel="alternative" href="/atom.xml" title="像素森林" type="application/atom+xml">
@@ -85,14 +82,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/01/20/我的Openwrt路由器配置/" title="我的Openwrt路由器配置" itemprop="url">我的Openwrt路由器配置</a>
+      <a href="/2015/06/24/申请TexturePacker免费授权/" title="申请TexturePacker免费授权（TP:712FBB1A）" itemprop="url">申请TexturePacker免费授权（TP:712FBB1A）</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="osss" target="_blank" itemprop="author">osss</a>
 		
   <p class="article-time">
-    <time datetime="2015-01-20T13:16:07.000Z" itemprop="datePublished"> 发表于 2015-01-20</time>
+    <time datetime="2015-06-24T07:56:13.000Z" itemprop="datePublished"> 发表于 2015-06-24</time>
     
   </p>
 </header>
@@ -101,50 +98,12 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#拨号配置"><span class="toc-number">1.</span> <span class="toc-text">拨号配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计划任务配置"><span class="toc-number">2.</span> <span class="toc-text">计划任务配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无线网络配置"><span class="toc-number">3.</span> <span class="toc-text">无线网络配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件包配置"><span class="toc-number">4.</span> <span class="toc-text">软件包配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端口映射配置"><span class="toc-number">5.</span> <span class="toc-text">端口映射配置</span></a></li></ol>
+			
 		
 		</div>
 		
-		<p>最近折腾了下WNDR 3700v4路由器openwrt固件更新，记录下过程备忘：</p>
-<h3 id="拨号配置">拨号配置</h3><p>在WAN口高级设置下调大LCP响应故障阈值和LCP响应间隔的值防止迅雷下载断线</p>
-<h3 id="计划任务配置">计划任务配置</h3><p>新建restart.sh文件内容如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span><br><span class="line"></span></span><br><span class="line">flag=$(date +%s -r /root/flag)</span><br><span class="line"></span><br><span class="line">ctime=$(date +%s)</span><br><span class="line"></span><br><span class="line">x=$((<span class="variable">$ctime</span>-<span class="variable">$flag</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#echo $x</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="variable">$x</span> <span class="operator">-gt</span> <span class="number">600</span> ]; <span class="keyword">then</span></span><br><span class="line"></span><br><span class="line">  touch /root/flag</span><br><span class="line"></span><br><span class="line">  <span class="built_in">echo</span> <span class="string">"touch &amp; reboot @ <span class="variable">$(date +%D" "%T)</span>"</span> &gt; /root/bootlog.txt <span class="number">2</span>&gt;&amp;<span class="number">1</span></span><br><span class="line"></span><br><span class="line">  reboot</span><br><span class="line"></span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></p>
-<p>保存并赋予执行权限<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">chmod</span> +<span class="tag">x</span> <span class="tag">restart</span><span class="class">.sh</span></span><br></pre></td></tr></table></figure></p>
-<p>编辑计划任务清单加入如下内容：<br><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">30 1 <span class="keyword">*</span> <span class="keyword">*</span> 0-4 wifi down</span><br><span class="line"></span><br><span class="line">5 6 <span class="keyword">*</span> <span class="keyword">*</span> 0-4 wifi on</span><br><span class="line"></span><br><span class="line">30 6 <span class="keyword">*</span> <span class="keyword">*</span> <span class="keyword">*</span> /root/restart.sh</span><br></pre></td></tr></table></figure></p>
-<h3 id="无线网络配置">无线网络配置</h3><h3 id="软件包配置">软件包配置</h3><ul>
-<li><p>安装ChinaDns</p>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Opkg <span class="operator"><span class="keyword">update</span></span><br><span class="line">Opkg <span class="keyword">install</span> 文件名</span><br><span class="line">/etc/init.d/chinadns <span class="keyword">start</span></span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置Dnsmasq<br>  修改配置文件<code>\etc\dnsmasq.conf</code>，在文件末尾加入</p>
-  <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">no-resolv</span><br><span class="line"></span><br><span class="line">server=<span class="number">127.0</span>.<span class="number">0.1</span><span class="hexcolor">#535</span>3</span><br><span class="line"></span><br><span class="line">conf-dir=/etc/dnsmasq.d</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>原版系统补充</p>
-  <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Opkg <span class="keyword">update</span></span><br><span class="line">Opkg install luci-<span class="keyword">app</span>-ddns luci-<span class="keyword">app</span>-upnp miniupnpd bind-dig</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h3 id="端口映射配置">端口映射配置</h3><table>
-<thead>
-<tr>
-<th>外网端口号</th>
-<th>协议</th>
-<th>内网目标IP</th>
-<th>内网端口号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>8000</td>
-<td>TCP</td>
-<td>192.168.1.20</td>
-<td>80</td>
-</tr>
-<tr>
-<td>6800</td>
-<td>TCP</td>
-<td>192.168.1.20</td>
-<td>6800</td>
-</tr>
-</tbody>
-</table>
+		<p>TP:712FBB1A</p>
+<p>TexturePacker主页：<a href="http://www.codeandweb.com/" target="_blank" rel="external">http://www.codeandweb.com/</a></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -153,7 +112,7 @@
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/openwrt/">openwrt</a>
+  <span></span> <a href="/tags/TexturePacker/">TexturePacker</a>
   </div>
 
 </div>
@@ -162,7 +121,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://blog.osss.me/2015/01/20/我的Openwrt路由器配置/" data-title="我的Openwrt路由器配置 | 像素森林" data-tsina="null" class="share clearfix">
+	  <div data-url="http://blog.osss.me/2015/06/24/申请TexturePacker免费授权/" data-title="申请TexturePacker免费授权（TP:712FBB1A） | 像素森林" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -175,19 +134,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/02/08/Blender常用快捷键/" title="Blender常用快捷键">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Blender常用快捷键</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2014/12/10/Word删除字间空格/"  title="Word删除字间空格">
+<a href="/2015/06/21/request获取GBK编码网页/"  title="request 获取GBK编码网页">
  <strong>下一篇：</strong><br/> 
- <span>Word删除字间空格
+ <span>request 获取GBK编码网页
 </span>
 </a>
 </div>
@@ -196,7 +147,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/01/20/我的Openwrt路由器配置/" data-title="我的Openwrt路由器配置" data-url="http://blog.osss.me/2015/01/20/我的Openwrt路由器配置/"></div>
+	<div class="ds-thread" data-thread-key="2015/06/24/申请TexturePacker免费授权/" data-title="申请TexturePacker免费授权（TP:712FBB1A）" data-url="http://blog.osss.me/2015/06/24/申请TexturePacker免费授权/"></div>
 </section>
 
 
@@ -206,7 +157,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#拨号配置"><span class="toc-number">1.</span> <span class="toc-text">拨号配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#计划任务配置"><span class="toc-number">2.</span> <span class="toc-text">计划任务配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#无线网络配置"><span class="toc-number">3.</span> <span class="toc-text">无线网络配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#软件包配置"><span class="toc-number">4.</span> <span class="toc-text">软件包配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#端口映射配置"><span class="toc-number">5.</span> <span class="toc-text">端口映射配置</span></a></li></ol>
+ 
  
   </div>
 
